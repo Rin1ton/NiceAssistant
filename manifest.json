@@ -7,13 +7,14 @@
     "default_popup": "NiceAssistant.html",
     "default_icon": "NiceAssistantIcon.png"
   },
+  "permissions": [
+    "activeTab"
+  ],
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*"
-      ]
+      "matches": ["http://*/*",
+    "https://*/*"]
     }
   ]
 }
