@@ -1,29 +1,45 @@
 //create new element
-var newTestElement = document.createElement("h2");
+/*var newTestElement = document.createElement("h2");
 
 var newTextNode = document.createTextNode("😎 COOL beginning of row BEANS 😎");
 //add text to new element
-newTestElement.appendChild(newTextNode);
+newTestElement.appendChild(newTextNode);*/
 
-var div=document.createElement("div");
+/*var div=document.createElement("div");
 document.body.appendChild(div);
-div.innerText="😎 COOL end of body BEANS 😎";
+div.innerText="😎 COOL end of body BEANS 😎";*/
 
 var listOfSpan = document.querySelectorAll("span");
 
 listOfSpan.forEach(element => {
   var coolestBeans = document.createElement("p");
-  coolestBeans.appendChild(document.createTextNode("😎 COOL every span tag BEANS 😎"));
+  coolestBeans.appendChild(document.createTextNode("😎"));
   element.insertAdjacentElement("beforebegin", coolestBeans);
 });
 
-var myVeryCoolStatus = document.getElementsByClassName("slds-truncate unavailable-code-state agent-state available-state-color");
-myVeryCoolStatus.insertAdjacentElement("beforeend", newTestElement);
+// ↓↓↓ CLICKABLE DROPDOWN ↓↓↓
+/*<div _ngcontent-gap-c146 ngldropdown class="agent-state-dropdown slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false">*/
 
-//append the element to another element
-if (document.getElementsByClassName("row") != null) {
-  document.getElementsByClassName("row")[0].insertAdjacentElement("afterbegin", newTestElement);
-}
+setTimeout(function() {
+  const buttonElem = [...document.querySelectorAll('a')].find(x => x.innerText.includes('Experience and Education'));
+  console.log("Going to click:")
+  console.log(buttonElem);
+  buttonElem.click();
+}, 3000);
+
+const buttonElem = [...document.querySelectorAll('div')].find(x => x.className.includes('slds-dropdown-trigger slds-dropdown-trigger_click'));
+console.log("Trying to click 'Available' dropdown...");
+buttonElem.click();
+
+/*<h1><a href="resume.html">Experience and Education</a></h1>*/
+
+/*const buttonElem = [...document.querySelectorAll('button')].find(x => x.innerText.includes('Voir plus'));
+buttonElem.click();*/
+
+
+
+const testButton = [...document.querySelectorAll('h1')].find(x => x.innerText.includes('Experience and Education'));
+testButton.click();
 
 /*const article = document.querySelector("article");
 
