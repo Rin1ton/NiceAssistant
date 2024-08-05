@@ -37,6 +37,9 @@ setTimeout(function() {
   buttonElem.click();
 }, 1000);
 
+//ACCEPT BUTTON when case comes in:
+//<button _ngcontent-vmr-c124="" class="slds-button slds-button_success accept-button">Accept</button>
+
 //click resume
 setTimeout(function() {
   const resumeButton = [...document.querySelectorAll('a')].find(x => x.innerText.includes('Experience and Education'));
